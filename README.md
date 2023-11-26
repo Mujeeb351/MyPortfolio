@@ -1,2 +1,3 @@
 # MyPortfolio
-This is My Portfolio
+live url for portfolio
+https://mujeeb351.github.io/MyPortfolio/

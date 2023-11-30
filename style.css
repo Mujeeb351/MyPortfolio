@@ -73,7 +73,8 @@ header.sticky{
     letter-spacing: 3px;
 }
 
-span{
+span,
+span a{
     color: var(--hover-color);
 }
 
@@ -186,7 +187,7 @@ section{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    width: 400px;
     margin: 1rem 0 2rem;
 }
 
@@ -310,30 +311,12 @@ section{
     width: 100%;
 }
 
-.home-image{
-    position: relative;
-}
-
-.image-box{
-    text-align: center;
-}
-
-.image-box img{
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-}
-
-.liquid-shape{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    top: 10%;
-}
-
-.liquid-shape:nth-child(2){
-    filter: blur(50px);
+#home .info-home img{
+    max-width: 400px;
+    height: auto;    
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: var(--neon-box-shadow);
 }
 
 /* About section........................................ */
@@ -382,18 +365,12 @@ section{
     font-size: var(--normal-font);
 }
 
-.about-content h3{
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: .2rem;
-
-}
-
 .about-content p{
     color: #fdfdfd;
     font-weight: 300;
     margin-bottom: 1.5rem;
     text-align: justify;
+    height: auto;
 }
 
 .info-about1,
@@ -454,8 +431,7 @@ section{
 
 .service{
     min-height: 100vh;
-    height: 100%;
-    width: 100%;
+    width: 100vw;
 }
 .main-text{
     width: 100%;
@@ -493,6 +469,7 @@ section{
     padding: 2rem 1rem 2rem;
     text-align: center;
     transition: transform .4s;
+    height: 450px;
 }
 
 .service-btn{
@@ -535,8 +512,7 @@ section{
 
 .skills{
     min-height: 100vh;
-    height: 100%;
-    width: 100%;
+    width: 100vw;
     background: var(--second-bg-color);  
 }
 
@@ -599,9 +575,9 @@ section{
     animation: javascript 4s;
 }
 
-.skill-bar .bar .figma{
-    width: 50%;
-    animation: figma 5s;
+.skill-bar .bar .db{
+    width: 80%;
+    animation: db 5s;
 }
 
 @keyframes html{
@@ -631,7 +607,7 @@ section{
     }
 }
 
-@keyframes figma{
+@keyframes db{
     0%{
         width: 0%;
     }
@@ -861,7 +837,7 @@ section{
 
 .form-btn .btn{
     font-size: 1rem;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 /* Footer section........................................ */
@@ -955,11 +931,7 @@ footer a i{
     .home-image{
         margin-bottom: 5rem;
     }
-    .liquid-shape{
-        width: 80%;
-        left: 10%;
-        top: 13%;
-    }
+    
     .about{
         flex-direction: column-reverse;
     }
@@ -986,6 +958,15 @@ footer a i{
     .filter-buttons .button{
         font-size: .8rem;
     }
+    .info-box{
+        width: 350px;
+        margin: 1rem 0 2rem;
+    }
+    .img-home img{
+        width: 300px;
+        margin: 20px;
+        padding: auto;
+    }
     .img-about img{
         width: 300px;
     }
@@ -997,6 +978,27 @@ footer a i{
     }
 
 }
+
+@media(max-width:375px){
+    .home img{
+        width: 300px;
+    }
+    .info-box{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        margin: 1rem 0 2rem;
+    }
+}
+
+@media(min-width:991px){
+    .home img{
+        width: 500px;
+        margin-left: 80px;
+    }
+}
+
 
 /*parallax...........................................................*/
 

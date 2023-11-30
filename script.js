@@ -121,3 +121,10 @@ scrollBottom.forEach((el)=> observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=> observer.observe(el));
+
+let dateTime = new Date();
+let ans = document.getElementById('DateTime')
+let year = dateTime.getFullYear()
+let month = dateTime.getMonth()
+let day = dateTime.getDate()
+ans.innerHTML = `${day}.${month}.${year}`;
